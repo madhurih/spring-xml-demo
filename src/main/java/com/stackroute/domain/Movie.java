@@ -9,6 +9,12 @@ public class Movie
     public Movie() {
     }
 
+    public Movie(Actor actor) {
+        System.out.println(actor);
+        this.actor = actor;
+    }
+
+
     public Movie(int id, String movieName, Actor actor) {
         this.id = id;
         this.movieName = movieName;
