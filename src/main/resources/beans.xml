@@ -24,10 +24,18 @@
     </bean>
 
     <bean name="movie, movie1, movie2" class="com.stackroute.domain.Movie" autowire="byName">
-<!--        <constructor-arg type="int" value="1"></constructor-arg>-->
-<!--        <constructor-arg type="String" value="Kalank"></constructor-arg>-->
-<!--        <constructor-arg type="Actor" ref="actor"></constructor-arg>-->
+        <constructor-arg type="int" value="1"></constructor-arg>
+        <constructor-arg type="String" value="Kalank"></constructor-arg>
+        <constructor-arg type="Actor" ref="actor"></constructor-arg>
     </bean>
+
+    <bean id="applicationContextAwareDemo" class="com.stackroute.awareInterface.ApplicationContextAwareDemo"></bean>
+
+    <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
+
+    <bean id = "beanFactoryAwareDemo" class="com.stackroute.awareInterface.BeanFactoryAwareDemo"></bean>
+
+    <bean id = "resourceLoaderAwareDemo" class="com.stackroute.awareInterface.ResourceLoaderAwareDemo"></bean>
 
 
 </beans>

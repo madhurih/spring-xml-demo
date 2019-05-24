@@ -17,29 +17,28 @@ public class Main
 {
     public static void main( String[] args )
     {
-        Resource resource = new ClassPathResource("beans.xml");
-        BeanFactory factory = new XmlBeanFactory(resource);
-        Movie movie = (Movie) factory.getBean("movie");
-        System.out.println(movie.getActor().getName()+ " acted in: " + movie.getMovieName());
+//        Resource resource = new ClassPathResource("beans.xml");
+//        BeanFactory factory = new XmlBeanFactory(resource);
+//        Movie movie = (Movie) factory.getBean("movie");
+//        System.out.println(movie.getActor().getName()+ " acted in: " + movie.getMovieName());
 
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie1 = (Movie) context.getBean("movie1");
         System.out.println(movie1.getActor().getName()+ " acted in: " + movie1.getMovieName());
 
+//        BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
+//        BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
+//        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
+//        Movie movie2=(Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie2");
+//        System.out.println(movie2.getActor().getName()+ " acted in: " + movie2.getMovieName());
 
-        BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
-        BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
-        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
-        Movie movie2=(Movie) ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean("movie2");
-        System.out.println(movie2.getActor().getName()+ " acted in: " + movie2.getMovieName());
-
-        //testing bean scope
-        ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie3 = (Movie) context1.getBean("movie");
-
-        Movie movie4 = (Movie) context1.getBean("movie");
-
-        System.out.println(movie3 == movie4);
+//        //testing bean scope
+//        ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
+//        Movie movie3 = (Movie) context1.getBean("movie");
+//
+//        Movie movie4 = (Movie) context1.getBean("movie");
+//
+//        System.out.println(movie3 == movie4);
 
     }
 }
