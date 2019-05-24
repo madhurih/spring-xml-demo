@@ -5,7 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
 <!--    <bean id="movie" class="com.stackroute.domain.Movie">-->
 <!--        <property name="id" value="1"></property>-->
 <!--        <property name="name" value="Kalank"></property>-->
@@ -25,11 +24,15 @@
         <constructor-arg index="2" value="25"></constructor-arg>
     </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
+    <bean name="movie, movie1, movie2" class="com.stackroute.domain.Movie" scope="prototype">
         <constructor-arg type="int" value="1"></constructor-arg>
         <constructor-arg type="String" value="Kalank"></constructor-arg>
         <constructor-arg type="Actor" ref="actor"></constructor-arg>
     </bean>
+
+<!--    <bean name="autowire" class="com.stackroute.domain.Movie">-->
+<!--                <constructor-arg type="Actor" ref="actor"></constructor-arg>-->
+<!--    </bean>-->
 
     <!-- more bean definitions here -->
 
