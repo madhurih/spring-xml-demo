@@ -41,5 +41,5 @@
         <property name="message" value="We are in : beanlifecycleDemoBean "></property>
     </bean>
 
-    <bean id="beanlifecycleDemoBean1" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
+    <bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 </beans>
