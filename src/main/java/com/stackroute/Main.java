@@ -40,5 +40,7 @@ public class Main
 //
 //        System.out.println(movie3 == movie4);
 
+        ClassPathXmlApplicationContext cxt=(ClassPathXmlApplicationContext)context;
+        cxt.destroy();
     }
 }

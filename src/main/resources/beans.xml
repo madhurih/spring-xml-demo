@@ -37,5 +37,8 @@
 
     <bean id = "resourceLoaderAwareDemo" class="com.stackroute.awareInterface.ResourceLoaderAwareDemo"></bean>
 
+    <bean id="beanlifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+        <property name="message" value="Hey, here I am..!"></property>
+    </bean>
 
 </beans>
